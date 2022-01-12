@@ -14,4 +14,4 @@ jobs:
           uses: JamesIves/github-pages-deploy-actions@4.1.4
           with: 
             branch: gh-pages #the branch the action should deploy to.
-            folder: /reality 
+            folder: .reality
