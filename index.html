@@ -9,9 +9,9 @@
 
 </head>
 <style>
-  .button{
+  .button {
     background-color: #0000ff;
-    border:  none;
+    border: none;
     color: white;
     padding: 7px;
     text-align: center;
@@ -25,54 +25,57 @@
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 2), 0 6px 20px 0 rgba(0, 0, 0, 19);
   }
 
-  .wrap{
+  .wrap {
     border: solid 1px #ccc;
     padding: 10px;
     text-align: center;
   }
-  #output{
+
+  #output {
     display: inline-block;
     top: 4px;
     position: relative;
     border: dotted 1px #ccc;
     padding: 2px;
   }
-  .button{
-     border: solid 2px #ccc;
+
+  .button {
+    border: solid 2px #ccc;
   }
 </style>
 <div style="position: fixed; top: 10px; width: 100%; text-align: center; z-index: 1;">
-    <button class="button" id="btn1">Model 1</button>
-    <button class="button" id="btn2">Model 2</button>
-    <button class="button" id="btn3">Model 3</button>
-  </div>
+  <button class="button" id="btn1">Model 1</button>
+  <button class="button" id="btn2">Model 2</button>
+  <button class="button" id="btn3">Model 3</button>
+</div>
+
 <body style="margin: 0px; overflow: hidden; "></body>
-  
-  <a-scene embedded arjs="debugUIEnabled: false" vr-mode-ui="enabled: false" >
-    <a-marker preset="hiro">
-      <a-entity id="entityID1" gltf-model=”url(gltf/wolf.gltf)” scale=".30 .30 .30">
 
-    </a-marker>
-    <a-entity camera></a-entity>
-  </a-scene>
+<a-scene embedded arjs="debugUIEnabled: false" vr-mode-ui="enabled: false">
+  <a-marker preset="hiro">
+    <a-entity id="entityID1" gltf-model=”url(gltf/wolf.gltf)” scale=".30 .30 .30">
 
-  <script>
-    document.getElementById("btn1").addEventListener("click", (e) => {
-      var el = document.querySelector('#entityID1');
-      el.setAttribute("obj-model", 'obj:url(skull/12140_Skull_v3_L2.obj);mtl:url(skull/12140_Skull_v3_L2.mtl)');
-      el.setAttribute("scale", '.10 .10 .10');
-    })
-    document.getElementById("btn2").addEventListener("click", (e) => {
-      var el = document.querySelector('#entityID1');
-      el.setAttribute("obj-model", 'obj:url(OBJ/iPhone_12_pro_max.obj);mtl:url(OBJ/iPhone_12_pro_max.mtl)');
-      el.setAttribute("scale", '.10 .10 .10');
-    })
-    document.getElementById("btn3").addEventListener("click", (e) => {
-      var el = document.querySelector('#entityID1');
-      el.setAttribute("obj-model", 'obj:url(3D/PLACA.obj);mtl:url(3D/PLACA.mtl)');
-      el.setAttribute("scale", '.10 .10 .10');
-    })
-  </script>
+  </a-marker>
+  <a-entity camera></a-entity>
+</a-scene>
+
+<script>
+  document.getElementById("btn1").addEventListener("click", (e) => {
+    var el = document.querySelector('#entityID1');
+    el.setAttribute("obj-model", 'obj:url(skull/12140_Skull_v3_L2.obj);mtl:url(skull/12140_Skull_v3_L2.mtl)');
+    el.setAttribute("scale", '.10 .10 .10');
+  })
+  document.getElementById("btn2").addEventListener("click", (e) => {
+    var el = document.querySelector('#entityID1');
+    el.setAttribute("obj-model", 'obj:url(OBJ/iPhone_12_pro_max.obj);mtl:url(OBJ/iPhone_12_pro_max.mtl)');
+    el.setAttribute("scale", '.10 .10 .10');
+  })
+  document.getElementById("btn3").addEventListener("click", (e) => {
+    var el = document.querySelector('#entityID1');
+    el.setAttribute("obj-model", 'obj:url(3D/PLACA.obj);mtl:url(3D/PLACA.mtl)');
+    el.setAttribute("scale", '.10 .10 .10');
+  })
+</script>
 
 
 </html>
